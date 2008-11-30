@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+begin
+  %w(rubygems mechanize hpricot).each { |lib| require lib }
+rescue LoadError
+  STDERR.puts 'Seems you\'re missing either WWW::Mechanize or Hpricot. Run "sudo gem install mechanize" and/or "sudo gem install hpricot"'
+  exit(-1)
+end
+
+tomorrow = ARGV.member?('tomorrow') ? ARGV.delete('tomorrow') : ''
+
+agent = WWW::Mechanize.new
+page = agent.get "http://goingtorain.com/#{tomorrow}"
+unless ARGV.empty?
+  cookie = agent.cookies.first
+  cookie.value = [cookie.value.split('%3A').first, '%3A', ARGV.join(' ')].join
+  page = agent.get "http://goingtorain.com/#{tomorrow}"
+end
+puts page.search('#forecast').text.gsub(/[\n\t]+/, ' ').sub(/^ /, '').capitalize
