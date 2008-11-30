@@ -20,5 +20,4 @@ Or alternatively, you can find out tomorrow's weather by just passing on "tomorr
 ##Notes
 
 goingtorain.com apparently only takes input from a cookie. Attempting to just submit the form on the page
-with a location's name would always yield a forecast for my current detected location. Had to resort to
-(WWW::Mechanize)[http://github.com/tenderlove/mechanize/tree/master].
+with a location's name would always yield a forecast for my current detected location. Had to resort to WWW::Mechanize.
