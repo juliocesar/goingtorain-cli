@@ -2,20 +2,24 @@
 
 A simple CLI interface for (goingtorain.com)[http://goingtorain.com].
 
+##Installation
+
+    $ sudo gem install juliocesar-goingtorain-cli --source=http://gems.github.com
+
 ##Usage
 
-I'll build a gem soon. In the meantime, clone this repo, then run
+Once installed, fire up a console and type
 
-    ./goingtorain
+    $ goingtorain
     
 That will give you the prospects of raining today where you are, as precise as goingtorain.com can determine. You
 can also specify a location, like for instance
 
-    ./goingtorain london
+    $ goingtorain london
     
 Or alternatively, you can find out tomorrow's weather by just passing on "tomorrow" as an argument
 
-    ./goingtorain tomorrow tokyo
+    $ goingtorain tomorrow tokyo
     
 ##Notes
 
