@@ -1,6 +1,6 @@
 #goingtorain.com CLI interface
 
-A simple CLI interface for (goingtorain.com)[http://goingtorain.com].
+A simple CLI interface for http://goingtorain.com.
 
 ##Installation
 
